@@ -10,6 +10,7 @@ import { RegisterTaskComponent } from './register-task/register-task.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateTaskComponent } from './update-task/update-task.component';
 import { DeleteTaskComponent } from './delete-task/delete-task.component';
+import { GeneratePDFComponent } from './generate-pdf/generate-pdf.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DeleteTaskComponent } from './delete-task/delete-task.component';
     ListTaskComponent,
     RegisterTaskComponent,
     UpdateTaskComponent,
-    DeleteTaskComponent
+    DeleteTaskComponent,
+    GeneratePDFComponent
   ],
   imports: [
     BrowserModule,
