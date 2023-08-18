@@ -16,7 +16,7 @@
             <a class="pointer" style="color: #c94c4c" (click)="deleteTask(task.id)" matTooltip="Delete Task">
                 <mat-icon>delete</mat-icon>
             </a>
-            <a class="pointer" style="color: #484f4f" matTooltip="Modify Task">
+            <a class="pointer" style="color: #484f4f" (click)="goToUpdateTask(task.id)" matTooltip="Modify Task">
                 <mat-icon>edit</mat-icon>
             </a>
          </td>

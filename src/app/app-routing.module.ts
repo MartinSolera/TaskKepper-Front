@@ -4,6 +4,7 @@ import { DeleteTaskComponent } from './delete-task/delete-task.component';
 import { GeneratePDFComponent } from './generate-pdf/generate-pdf.component';
 import { ListTaskComponent } from './list-task/list-task.component';
 import { RegisterTaskComponent } from './register-task/register-task.component';
+import { UpdateTaskComponent } from './update-task/update-task.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:'',redirectTo:'task',pathMatch:'full'},
   {path: 'register-task',component : RegisterTaskComponent}, 
   {path: 'delete-task',component : DeleteTaskComponent},
-  {path: 'pdf',component : GeneratePDFComponent}
+  {path: 'pdf',component : GeneratePDFComponent},
+  {path: 'update-task/:id', component: UpdateTaskComponent}
  
 
 ];

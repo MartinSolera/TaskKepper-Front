@@ -13,10 +13,9 @@ export class TaskService {
   private baseURL = "/api/tasks";
 
   private baseURL2 ="http://localhost:8080/api/tasks"; 
+  private baseURL3 ="http://localhost:8080/api/task";
 
   constructor(private httpClient : HttpClient) {  }
-
-  ///-------------------------------------
 
   obtenerListaEmpleados():Observable<Task[]>{
     return this.httpClient.get<Task[]>(`${this.baseURL2}`); 
@@ -30,12 +29,8 @@ export class TaskService {
     return this.httpClient.delete<Task>(`${this.baseURL2}/${id}`); 
   }
 
-  ///-------------------------------------------
-
   updateTask(id:number, task:Task):Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}/${id}`,task); 
+    return this.httpClient.put(`${this.baseURL3}/${id}`,task); 
   }
 
-  
-   
 }

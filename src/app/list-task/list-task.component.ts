@@ -37,7 +37,9 @@ export class ListTaskComponent implements OnInit{
       console.log(data);
       this.getDatos();
     })
-     
+  }
 
+  goToUpdateTask(taskId: number) {
+    this.router.navigate(['update-task', taskId]); 
   }
 }
