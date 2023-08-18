@@ -11,6 +11,8 @@ import { TaskService } from '../task.service';
 export class ListTaskComponent implements OnInit{
 
   taskArray : Task[]; 
+  displayedColumns: string[] = ['nombre', 'descripcion', 'acciones'];
+  
 
   constructor(private taskService : TaskService, private router:Router){ }
 

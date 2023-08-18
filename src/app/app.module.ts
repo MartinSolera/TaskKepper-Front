@@ -11,6 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { UpdateTaskComponent } from './update-task/update-task.component';
 import { DeleteTaskComponent } from './delete-task/delete-task.component';
 import { GeneratePDFComponent } from './generate-pdf/generate-pdf.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,16 @@ import { GeneratePDFComponent } from './generate-pdf/generate-pdf.component';
     UpdateTaskComponent,
     DeleteTaskComponent,
     GeneratePDFComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
