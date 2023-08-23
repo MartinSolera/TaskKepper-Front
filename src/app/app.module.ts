@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     BrowserAnimationsModule,
     MatTableModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatButtonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

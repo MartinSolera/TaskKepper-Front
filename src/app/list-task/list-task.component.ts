@@ -42,4 +42,8 @@ export class ListTaskComponent implements OnInit{
   goToUpdateTask(taskId: number) {
     this.router.navigate(['update-task', taskId]); 
   }
+
+  deleteAllTasks(){
+    console.log("Delete All"); 
+  }
 }
