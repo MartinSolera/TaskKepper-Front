@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Task } from '../model/task';
 import { TaskService } from '../task.service';
+import { ChangeDetectorRef } from '@angular/core';
+import { delay } from 'rxjs';
+
 
 @Component({
   selector: 'app-list-task',
@@ -14,7 +17,10 @@ export class ListTaskComponent implements OnInit{
   displayedColumns: string[] = ['nombre', 'descripcion', 'acciones'];
   
 
-  constructor(private taskService : TaskService, private router:Router){ }
+  constructor(private taskService : TaskService, 
+              private router:Router,
+              private cdr: ChangeDetectorRef){ }
+
 
   ngOnInit(): void {
     this.getDatos(); 
@@ -28,13 +34,11 @@ export class ListTaskComponent implements OnInit{
 
    updateTask(id:number, task:Task){
     this.taskService.updateTask(id, task).subscribe(dato => {
-      console.log(dato);
     });
   }
 
    deleteTask(id:number){
     this.taskService.deleteTask(id).subscribe(data => {
-      console.log(data);
       this.getDatos();
     })
   }
@@ -43,7 +47,25 @@ export class ListTaskComponent implements OnInit{
     this.router.navigate(['update-task', taskId]); 
   }
 
-  deleteAllTasks(){
-    console.log("Delete All"); 
+
+  deleteAllTasks(): void {
+    const userConfirmed = window.confirm("¿Estás seguro de que quieres borrar todas las tareas?");
+  
+    if (userConfirmed) {      
+      this.taskService.deleteAllTasks().subscribe(
+        () => {
+          console.log("Delete All completed");
+          this.getDatos();
+          this.cdr.detectChanges();
+        },
+        error => {
+          console.error("Error deleting all tasks:", error);
+        }
+      );
+    } else {
+      console.log("Operación de borrado cancelada por el usuario.");
+    }
   }
 }
+
+
