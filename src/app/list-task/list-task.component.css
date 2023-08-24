@@ -13,6 +13,14 @@ th{
 
 
 #btn-delete-all {
-    margin-right: 20px;
+    color: blue;
+  }
+  
+/* En el archivo de estilos CSS de tu componente (por ejemplo, list-task.component.css) */
+
+#btn-delete-all button {
+    background-color: rgb(147, 24, 112);
+    color: white; 
+    margin-top: 15px;
   }
   
