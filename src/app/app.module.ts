@@ -16,6 +16,12 @@ import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { DateComponent } from './date/date.component';
+
 
 
 
@@ -26,7 +32,8 @@ import {MatButtonModule} from '@angular/material/button';
     RegisterTaskComponent,
     UpdateTaskComponent,
     DeleteTaskComponent,
-    GeneratePDFComponent
+    GeneratePDFComponent,
+    DateComponent
     
   ],
   imports: [
@@ -38,8 +45,11 @@ import {MatButtonModule} from '@angular/material/button';
     MatTableModule,
     MatIconModule,
     MatTooltipModule,
-    MatButtonModule
-    
+    MatButtonModule, 
+    MatFormFieldModule, 
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
