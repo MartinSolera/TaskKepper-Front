@@ -20,12 +20,6 @@ export class DateComponent {
     )
   }
 
-  ///Probando .... 
-
-
-
-
-
   onSubmit() {
     this.calculateDate(); 
     console.log('Selected date:', this.selectedDate); 
