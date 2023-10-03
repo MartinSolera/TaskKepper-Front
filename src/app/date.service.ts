@@ -10,7 +10,7 @@ export class DateService {
 
   constructor(private httpClient : HttpClient) { }
 
-  calculateDays(fecha: string):Observable<number>{
+  calculateDays(fecha: String):Observable<number>{
     return this.httpClient.get<number>(`${this.fechabaseURL}/${fecha}`);
   }
 

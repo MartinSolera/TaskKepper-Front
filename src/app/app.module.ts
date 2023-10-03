@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListTaskComponent } from './list-task/list-task.component';
-
 import {HttpClientModule} from '@angular/common/http';
 import { RegisterTaskComponent } from './register-task/register-task.component'; 
 import { FormsModule } from '@angular/forms';
@@ -21,8 +19,6 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { DateComponent } from './date/date.component';
-
-
 
 
 @NgModule({
