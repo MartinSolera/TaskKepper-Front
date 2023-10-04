@@ -28,14 +28,17 @@
 </table>
 
 <div id="btn-delete-all">
-    <button mat-raised-button color="warn" (click)="deleteAllTasks()"> Delete All </button>
+    <button mat-raised-button color="warn" (click)="addTask()"> Add New </button>
 </div>
 
-
+<br>
+    <button mat-raised-button color="warn" (click)="deleteAllTasks()"> Delete All </button>
+    <button mat-raised-button color="warn" (click)="generatePdf()"> Generate PDF </button>
 </div>
 
 <div *ngIf="taskArray.length == 0">
     <h1>No hay tareas para mostrar</h1>
+    <button mat-raised-button color="warn" (click)="addTask()"> Add New </button>
 </div>
 
 

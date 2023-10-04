@@ -47,7 +47,6 @@ export class ListTaskComponent implements OnInit{
     this.router.navigate(['update-task', taskId]); 
   }
 
-
   deleteAllTasks(): void {
     const userConfirmed = window.confirm("¿Estás seguro de que quieres borrar todas las tareas?");
   
@@ -66,6 +65,17 @@ export class ListTaskComponent implements OnInit{
       console.log("Operación de borrado cancelada por el usuario.");
     }
   }
+
+
+  addTask() {
+    this.router.navigate(['register-task']);
+  }
+
+  generatePdf(){
+    window.open('/pdf', '_blank');
+  }
+
+
 }
 
 
