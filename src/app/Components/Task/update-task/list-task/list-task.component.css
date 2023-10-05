@@ -24,5 +24,7 @@ th{
     margin-top: 15px;
   }
   
-
+  #addTask {
+    text-align: right; /* Alinea el contenido a la derecha */
+  }
   
