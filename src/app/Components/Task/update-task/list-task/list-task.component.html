@@ -1,0 +1,54 @@
+<div *ngIf="taskArray.length > 0">
+<table mat-table [dataSource]="taskArray" class="mat-elevation-z5">
+
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let task">
+            <span [ngStyle]="{'text-decoration': task.completed ? 'line-through' : 'none'}">{{task.name}}</span>
+        </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+        <td mat-cell *matCellDef="let task">
+            <span [ngStyle]="{'text-decoration': task.completed ? 'line-through' : 'none'}">{{task.description}}</span>
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let task"> 
+
+            <a class="pointer" style="color: #c94c4c" (click)="deleteTask(task.id)" matTooltip="Delete Task">
+                <mat-icon>delete</mat-icon>
+            </a>
+
+            <a class="pointer" style="color: #484f4f" (click)="goToUpdateTask(task.id)" matTooltip="Modify Task">
+                <mat-icon>edit</mat-icon>
+            </a>
+
+            <button mat-icon-button (click)="toggleComplete(task)">
+                <mat-icon>{{ task.completed ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+              </button>
+         </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div id="addTask">
+    <button class="btn btn-success" (click)="addTask()"> + </button>
+</div>
+
+<br>
+    <button mat-raised-button (click)="generatePdf()"> Generate PDF </button>    
+    <button mat-raised-button color="warn" (click)="deleteAllTasks()"> Delete All </button>
+</div>
+
+<div *ngIf="taskArray.length == 0">
+    <h1>No hay tareas para mostrar</h1>
+    <button class="btn btn-success" (click)="addTask()"> Add Task </button>
+</div>
+
+
