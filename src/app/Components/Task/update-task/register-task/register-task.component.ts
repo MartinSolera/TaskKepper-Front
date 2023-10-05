@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Task } from '../model/task';
-import { TaskService } from '../task.service';
+import { Task } from '../../../../model/task';
+import { TaskService } from '../../../../Service/task.service';
 
 @Component({
   selector: 'app-register-task',

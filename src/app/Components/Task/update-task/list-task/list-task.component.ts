@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Task } from '../model/task';
-import { TaskService } from '../task.service';
+import { Task } from '../../../../model/task';
+import { TaskService } from '../../../../Service/task.service';
 import { ChangeDetectorRef } from '@angular/core';
 import { delay } from 'rxjs';
 
@@ -73,6 +73,10 @@ export class ListTaskComponent implements OnInit{
 
   generatePdf(){
     window.open('/pdf', '_blank');
+  }
+
+  toggleComplete(task: Task) {
+    task.completed = !task.completed;
   }
 
 
