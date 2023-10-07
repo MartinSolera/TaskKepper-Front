@@ -4,6 +4,7 @@ import { Task } from '../../../../model/task';
 import { TaskService } from '../../../../Service/task.service';
 import { ChangeDetectorRef } from '@angular/core';
 import { delay } from 'rxjs';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -48,23 +49,38 @@ export class ListTaskComponent implements OnInit{
   }
 
   deleteAllTasks(): void {
-    const userConfirmed = window.confirm("¿Estás seguro de que quieres borrar todas las tareas?");
-  
-    if (userConfirmed) {      
-      this.taskService.deleteAllTasks().subscribe(
-        () => {
-          console.log("Delete All completed");
-          this.getDatos();
-          this.cdr.detectChanges();
-        },
-        error => {
-          console.error("Error deleting all tasks:", error);
-        }
-      );
-    } else {
-      console.log("Operación de borrado cancelada por el usuario.");
-    }
+    Swal.fire({
+      title: '¿Estás seguro de que quieres borrar todas las tareas?',
+      text: 'Esta acción no se puede deshacer.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, borrar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.taskService.deleteAllTasks().subscribe(
+          () => {
+            this.getDatos();
+            this.cdr.detectChanges();
+            Swal.fire('Todas las tareas han sido borradas', '', 'success');
+          },
+        );
+      }
+    });
   }
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   addTask() {

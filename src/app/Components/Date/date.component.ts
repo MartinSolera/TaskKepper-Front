@@ -22,16 +22,12 @@ export class DateComponent {
     const formattedDate = `${year}-${month}-${day}`;
 
     this.dateService.calculateDays(formattedDate).subscribe(
-      result => {
-        //console.log("El resultado del service es: " + result);
-        //alert("Han pasado " + result + " desde la fecha indicada"); 
-        
+      result => {        
         Swal.fire(
           'Han pasado ' + result + ' dias',
           '',
           'info'
         )
-        
       }
     )
   }
