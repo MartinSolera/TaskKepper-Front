@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DateService } from '../../Service/date.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-date',
@@ -22,8 +23,14 @@ export class DateComponent {
 
     this.dateService.calculateDays(formattedDate).subscribe(
       result => {
-        console.log("El resultado del service es: " + result);
-        alert("Han pasado " + result + " desde la fecha indicada"); 
+        //console.log("El resultado del service es: " + result);
+        //alert("Han pasado " + result + " desde la fecha indicada"); 
+        
+        Swal.fire(
+          'Han pasado ' + result + ' dias',
+          '',
+          'info'
+        )
         
       }
     )
