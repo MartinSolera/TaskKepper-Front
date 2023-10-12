@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Task } from '../../../../model/task';
-import { TaskService } from '../../../../Service/task.service';
+import { Task } from '../../../model/task';
+import { TaskService } from '../../../Service/task.service';
 import { ChangeDetectorRef } from '@angular/core';
 import { delay } from 'rxjs';
 import Swal from 'sweetalert2';
