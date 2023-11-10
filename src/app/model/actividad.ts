@@ -1,6 +1,6 @@
-export class ACtividad {
+export class Actividad {
     idActividad: number;
     descripcion: string;
     fechaInicio: Date; 
-    fechaDin: Date; 
+    fechaFin: Date; 
 }

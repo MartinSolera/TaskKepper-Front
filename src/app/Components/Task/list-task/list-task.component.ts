@@ -30,6 +30,8 @@ export class ListTaskComponent implements OnInit{
    getDatos(){
     this.taskService.obtenerListaEmpleados().subscribe(dato => {
       this.taskArray = dato;
+      console.log("los datos son: " + this.taskArray[0]);
+      
     });
   }
 
