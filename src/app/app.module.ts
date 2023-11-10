@@ -19,6 +19,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { DateComponent } from './Components/Date/date.component';
+import { ListActividadesComponent } from './Components/Actividades/list-actividades/list-actividades.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DateComponent } from './Components/Date/date.component';
     UpdateTaskComponent,
     DeleteTaskComponent,
     GeneratePDFComponent,
-    DateComponent
+    DateComponent,
+    ListActividadesComponent
     
   ],
   imports: [
