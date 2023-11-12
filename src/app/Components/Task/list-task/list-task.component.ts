@@ -71,20 +71,6 @@ export class ListTaskComponent implements OnInit{
     });
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   addTask() {
     this.router.navigate(['register-task']);
   }

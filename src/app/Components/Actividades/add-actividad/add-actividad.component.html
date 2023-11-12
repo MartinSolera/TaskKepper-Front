@@ -1,0 +1,28 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Register of Actividad</h3>
+
+  <form (ngSubmit)="onSubmit()">
+      <div class="form/group">
+          <label>Description:</label>
+          <input type="text" class="form-control" id="descripcion" [(ngModel)]="actividad.descripcion" name="descripcion">
+      </div>
+
+      
+      <div class="form/group">
+          <label>Fecha de Inicio:</label>
+          <input matInput [matDatepicker]="pickerInicio" name="fechaInicio" [(ngModel)]="actividad.fechaInicio">
+          <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+          <mat-datepicker #pickerInicio></mat-datepicker>
+      </div>
+
+      <div class="form/group">
+          <label>Fecha de Fin:</label>
+          <input matInput [matDatepicker]="pickerFin" name="fechaFin" [(ngModel)]="actividad.fechaFin">
+          <mat-datepicker-toggle matSuffix [for]="pickerFin"></mat-datepicker-toggle>
+          <mat-datepicker #pickerFin></mat-datepicker>
+      </div>
+    
+      <br>
+      <button class="btn btn-success">Save</button>
+  </form>
+</div>

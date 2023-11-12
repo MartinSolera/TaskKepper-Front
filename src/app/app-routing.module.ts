@@ -7,6 +7,7 @@ import { RegisterTaskComponent } from './Components/Task/register-task/register-
 import { UpdateTaskComponent } from './Components/Task/update-task/update-task.component';
 import { DateComponent } from './Components/Date/date.component';
 import { ListActividadesComponent } from './Components/Actividades/list-actividades/list-actividades.component';
+import { AddActividadComponent } from './Components/Actividades/add-actividad/add-actividad.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'pdf',component : GeneratePDFComponent},
   {path: 'update-task/:id', component: UpdateTaskComponent},
   {path: 'date', component: DateComponent},
-  {path: 'actividad', component: ListActividadesComponent}
+  {path: 'actividad', component: ListActividadesComponent},
+  {path: 'add-actividad', component: AddActividadComponent}
  
 
 ];

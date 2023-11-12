@@ -38,8 +38,10 @@ export class ListActividadesComponent {
     })
   }
 
-
-
-
+  
+  addActividad(){
+    this.router.navigate(['add-actividad']);
+  }
+  
 
 }

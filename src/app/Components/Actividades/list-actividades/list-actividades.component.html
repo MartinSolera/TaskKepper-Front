@@ -39,21 +39,21 @@
 
         </td>
    </ng-container>
-
-         
+     
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <!-- 
-
-    <div id="addTask">
-        <button class="btn btn-success" (click)="addTask()"> + </button>
+    
+    <div id="addActividad">
+        <button class="btn btn-success" (click)="addActividad()"> + </button>
     </div>
 
     
-
+    <!-- 
+    
     <br>
+
     <button mat-raised-button (click)="generatePdf()"> Generate PDF </button>
     <button mat-raised-button color="warn" (click)="deleteAllTasks()"> Delete All </button>
     

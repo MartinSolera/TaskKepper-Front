@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Actividad } from '../model/actividad';
 import { tap, catchError } from 'rxjs/operators';
+import { Task } from '../model/task';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ import { tap, catchError } from 'rxjs/operators';
 export class ActividadService {
 
   private baseURL2 ="http://localhost:8080/api/act/actividad"; 
+  private baseURL3 ="http://localhost:8080/api/act/createactividad"; 
 
 
   constructor(private httpClient : HttpClient) { }
@@ -28,6 +30,10 @@ export class ActividadService {
 
   deleteActividad(id:number):Observable<Actividad>{
     return this.httpClient.delete<Actividad>(`${this.baseURL2}/${id}`);
+  }
+
+  addActividad(actividad : Actividad) : Observable<Object>{
+      return this.httpClient.post(`${this.baseURL3}`,actividad); 
   }
 
 }
