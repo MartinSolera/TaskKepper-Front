@@ -24,4 +24,10 @@ export class ActividadService {
         })
       );
   }
+
+
+  deleteActividad(id:number):Observable<Actividad>{
+    return this.httpClient.delete<Actividad>(`${this.baseURL2}/${id}`);
+  }
+
 }

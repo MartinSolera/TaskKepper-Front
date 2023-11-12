@@ -1,5 +1,5 @@
 export class Actividad {
-    idActividad: number;
+    id: number;
     descripcion: string;
     fechaInicio: Date; 
     fechaFin: Date; 

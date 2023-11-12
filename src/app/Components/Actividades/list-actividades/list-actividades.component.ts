@@ -10,7 +10,7 @@ import { Actividad } from 'src/app/model/actividad';
 })
 export class ListActividadesComponent {
   actividadesArray: Actividad[] = [];
-  displayedColumns: string[] = ['descripcion', 'fechaInicio','fechaFin'];
+  displayedColumns: string[] = ['descripcion', 'fechaInicio','fechaFin','acciones'];
 
   constructor(
     private actividadService: ActividadService,
@@ -27,6 +27,14 @@ export class ListActividadesComponent {
       this.actividadesArray = dato; 
       console.log("Los datos son: " + this.actividadService);
       
+    })
+  }
+
+  deleteActividad(id : number){
+    console.log("ID a eliminar:", id); // Agregar este console.log
+
+    this.actividadService.deleteActividad(id).subscribe(data => {
+        this.getDatos(); 
     })
   }
 
