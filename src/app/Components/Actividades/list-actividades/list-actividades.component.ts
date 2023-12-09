@@ -10,7 +10,7 @@ import { Actividad } from 'src/app/model/actividad';
 })
 export class ListActividadesComponent {
   actividadesArray: Actividad[] = [];
-  displayedColumns: string[] = ['descripcion', 'fechaInicio','fechaFin','acciones'];
+  displayedColumns: string[] = ['descripcion', 'fechaInicio','fechaFin', 'result', 'acciones'];
 
   constructor(
     private actividadService: ActividadService,

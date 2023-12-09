@@ -3,4 +3,5 @@ export class Actividad {
     descripcion: string;
     fechaInicio: Date; 
     fechaFin: Date; 
+    result : number; 
 }

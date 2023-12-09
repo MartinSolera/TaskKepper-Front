@@ -26,12 +26,11 @@ export class AddActividadComponent implements OnInit{
   }
 
   goToListTask(){
-    this.router.navigate(['/add-actividad']); 
+    this.router.navigate(['/actividad']); 
   }
 
   onSubmit(){
-    this.saveActividad();
-    console.log(this.actividad);
+    this.saveActividad();  
   }
 
 }
