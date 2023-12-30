@@ -1,0 +1,42 @@
+/* dolar.component.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    border-radius: 15px; /* Añadido para redondear los bordes del cuerpo */
+  }
+  
+  #contenedorCuadros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px; /* Añadido para redondear los bordes del contenedor de cuadros */
+    margin-top: 20px; /* Espaciado superior */
+  }
+  
+  #filaSuperior,
+  #filaInferior {
+    display: flex;
+    margin-bottom: 20px; /* Espaciado entre filas */
+  }
+  
+  .cuadro {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #3498db;
+    background-color: #3498db;
+    color: #fff;
+    margin: 10px;
+    border-radius: 8px; /* Puedes ajustar este valor según tus preferencias */
+  }
+  
+  .cuadro:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  

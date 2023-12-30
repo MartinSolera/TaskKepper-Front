@@ -1,0 +1,24 @@
+<!-- dolar.component.html -->
+
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="dolar.component.css">
+</head>
+
+<body>
+
+    <div id="contenedorCuadros">
+      <div *ngFor="let row of dolarRows" class="fila">
+        <div *ngFor="let dolar of row" class="cuadro">
+          <h2>{{dolar.casa}}</h2>
+          <p>Compra: {{dolar.compra}}</p>
+          <p>Venta: {{dolar.venta}}</p>
+          <p>Fecha de Actualización: {{dolar.fechaActualizacion | date:'medium'}}</p>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+  
+</html>

@@ -21,6 +21,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import { DateComponent } from './Components/Date/date.component';
 import { ListActividadesComponent } from './Components/Actividades/list-actividades/list-actividades.component';
 import { AddActividadComponent } from './Components/Actividades/add-actividad/add-actividad.component';
+import { DolarComponent } from './Components/dolar/dolar.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AddActividadComponent } from './Components/Actividades/add-actividad/ad
     GeneratePDFComponent,
     DateComponent,
     ListActividadesComponent,
-    AddActividadComponent
+    AddActividadComponent,
+    DolarComponent
     
   ],
   imports: [
