@@ -1,24 +1,25 @@
-<!-- dolar.component.html -->
-
-<html lang="es">
-
-<head>
-    <link rel="stylesheet" href="dolar.component.css">
-</head>
-
-<body>
-
-    <div id="contenedorCuadros">
-      <div *ngFor="let row of dolarRows" class="fila">
-        <div *ngFor="let dolar of row" class="cuadro">
-          <h2>{{dolar.casa}}</h2>
-          <p>Compra: {{dolar.compra}}</p>
-          <p>Venta: {{dolar.venta}}</p>
-          <p>Fecha de Actualización: {{dolar.fechaActualizacion | date:'medium'}}</p>
+<mat-grid-list cols="3" rowHeight="2:3">
+    <mat-grid-tile *ngFor="let dolar of dolarList">
+      <mat-grid-tile-header>
+        <div class="seccion-header">
+          <h2>{{ dolar.casa | uppercase }}</h2>
+        </div>
+      </mat-grid-tile-header>
+  
+      <div class="seccion-compra-venta">
+        <div class="seccion-compra">
+          Compra: $ {{ dolar.compra }}
+        </div>
+        <div class="seccion-venta">
+          Venta: $ {{ dolar.venta }}
         </div>
       </div>
-    </div>
   
-  </body>
+      <mat-grid-tile-footer>
+        <div class="seccion-footer">
+          <h3>Fecha Act. {{ dolar.fechaActualizacion }}</h3>
+        </div>
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
   
-</html>

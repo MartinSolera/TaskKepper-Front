@@ -22,6 +22,8 @@ import { DateComponent } from './Components/Date/date.component';
 import { ListActividadesComponent } from './Components/Actividades/list-actividades/list-actividades.component';
 import { AddActividadComponent } from './Components/Actividades/add-actividad/add-actividad.component';
 import { DolarComponent } from './Components/dolar/dolar.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 
 @NgModule({
@@ -51,7 +53,8 @@ import { DolarComponent } from './Components/dolar/dolar.component';
     MatFormFieldModule, 
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule    
+    MatNativeDateModule,
+    MatGridListModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
