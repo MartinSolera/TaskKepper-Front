@@ -15,6 +15,7 @@ export class TaskService {
   private baseURL2 ="http://localhost:8080/api/tasks"; 
   private baseURL3 ="http://localhost:8080/api/task";
   private deleteAllURL = "http://localhost:8080/api/tasks/deleteAll"; 
+  private URLtaskById = "http://localhost:8080/api/task"; 
 
   constructor(private httpClient : HttpClient) {  }
 
@@ -36,6 +37,10 @@ export class TaskService {
 
   deleteAllTasks():Observable<Object>{
     return this.httpClient.delete(`${this.deleteAllURL}`); 
+  }
+
+  getTaskById(id:number):Observable<Task>{
+    return this.httpClient.get(`${this.URLtaskById}/${id}`) as Observable<Task>;
   }
 
 }
