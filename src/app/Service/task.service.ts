@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Task } from '../model/task';
+import Swal from 'sweetalert2';
 
 ///Probando git
 @Injectable({
@@ -24,7 +25,20 @@ export class TaskService {
   }
 
   registerTask(task : Task) : Observable<Object>{
-    return this.httpClient.post(`${this.baseURL2}`,task); 
+    if(task.name != null){
+      return this.httpClient.post(`${this.baseURL2}`,task); 
+    }else {
+      Swal.fire(
+        'No completaste correctamente los datos',
+        '',
+        'info'
+      );
+      return new Observable<Object>(observer => {
+
+
+        observer.error("La tarea no puede ser nula");
+      });
+    }
   }
 
   deleteTask(id:number):Observable<Task>{
