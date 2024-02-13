@@ -8,7 +8,7 @@ import { UpdateTaskComponent } from './Components/Task/update-task/update-task.c
 import { DateComponent } from './Components/Date/date.component';
 import { ListActividadesComponent } from './Components/Actividades/list-actividades/list-actividades.component';
 import { AddActividadComponent } from './Components/Actividades/add-actividad/add-actividad.component';
-import { DolarComponent } from './Components/dolar/dolar.component';
+import { DolarComponent } from './Components/Dolar/dolar.component';
 
 
 const routes: Routes = [
