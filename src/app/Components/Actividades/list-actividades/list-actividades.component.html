@@ -13,7 +13,7 @@
   
   <ng-container matColumnDef="fechaFin">
     <th mat-header-cell *matHeaderCellDef> Fecha de Fin </th>
-    <td mat-cell *matCellDef="let actividad">{{ actividad.fechaFin | date }}</td>
+    <td mat-cell *matCellDef="let actividad">{{ actividad.fechaFin  ? (actividad.fechaFin | date) : '-' }}</td>
   </ng-container>
 
 
