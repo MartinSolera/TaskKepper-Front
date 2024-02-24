@@ -23,7 +23,7 @@ export class DolarComponent {
 
 
     getDatos(){
-      this.dolarService.getAll().subscribe(
+      this.dolarService.getDevicesFiltered().subscribe(
         data => {
           this.dolarList = data; 
           console.log("Los datos son:", this.dolarList);   

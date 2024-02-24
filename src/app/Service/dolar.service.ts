@@ -10,11 +10,17 @@ import { Task } from '../model/task';
 export class DolarService {
 
   private baseURL = "https://dolarapi.com/v1/dolares"
+  private urlFiltered = "http://localhost:8080/api/dolar/filtered"
+  
 
   constructor(private httpClient : HttpClient) { }
 
 
   getAll():Observable<Dolar[]>{
     return this.httpClient.get<Dolar[]>(`${this.baseURL}`); 
+  }
+
+  getDevicesFiltered():Observable<Dolar[]>{
+    return this.httpClient.get<Dolar[]>(`${this.urlFiltered}`);
   }
 }

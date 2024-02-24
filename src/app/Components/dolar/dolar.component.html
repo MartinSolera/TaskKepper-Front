@@ -1,30 +1,28 @@
 <body>
-    
 
-
-<mat-grid-list cols="3" rowHeight="2:3">
-    <mat-grid-tile *ngFor="let dolar of dolarList">
-      <mat-grid-tile-header>
-        <div class="seccion-header">
-          <h2>{{ dolar.casa | uppercase }}</h2>
-        </div>
-      </mat-grid-tile-header>
-  
-      <div class="seccion-compra-venta">
-        <div class="seccion-compra">
-          Compra: $ {{ dolar.compra }}
-        </div>
-        <div class="seccion-venta">
-          Venta: $ {{ dolar.venta }}
+  <div class="cards">
+    <div class="card" *ngFor="let dolar of dolarList">
+      <div class="content">
+        <h1>{{ dolar.casa | uppercase }}</h1>
+        <div class="seccion-compra-venta">
+          <div class="seccion-compra">
+            Compra: {{dolar.compra}}
+          </div>
+          <div class="seccion-venta">
+            Venta: {{dolar.venta}}
+          </div>
         </div>
       </div>
-  
-      <mat-grid-tile-footer>
-        <div class="seccion-footer">
-          <h3>Fecha Act. {{ dolar.fechaActualizacion }}</h3>
-        </div>
-      </mat-grid-tile-footer>
-    </mat-grid-tile>
-  </mat-grid-list>
-  
+      <div class="footer">
+        <h2>Probando footer</h2>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
 </body>
