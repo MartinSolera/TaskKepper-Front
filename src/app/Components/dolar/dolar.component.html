@@ -1,28 +1,29 @@
 <body>
-
   <div class="cards">
+
     <div class="card" *ngFor="let dolar of dolarList">
       <div class="content">
-        <h1>{{ dolar.casa | uppercase }}</h1>
+        <div class="title">
+        <h2>{{ dolar.casa | uppercase }}</h2>
+        </div>
+
         <div class="seccion-compra-venta">
+         
           <div class="seccion-compra">
-            Compra: {{dolar.compra}}
+            Compra: $ {{dolar.compra}}
           </div>
+          
           <div class="seccion-venta">
-            Venta: {{dolar.venta}}
+            Venta: $ {{dolar.venta}}
           </div>
         </div>
+
       </div>
+
       <div class="footer">
-        <h2>Probando footer</h2>
+        <p>Actualizado: {{dolar.fechaActualizacion | date: 'short'}} </p>
       </div>
     </div>
+
   </div>
-
-
-
-
-
-
-
 </body>

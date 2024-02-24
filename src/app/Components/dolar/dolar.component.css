@@ -3,6 +3,7 @@ body,html{
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  text-align: center;
 }
 
 .card{
@@ -11,8 +12,13 @@ body,html{
 }
 
 .card .footer{
-  background-color: grey;
-  padding: 2px;
+  background-color: rgb(201, 197, 197);
+  padding: 1px;
+  font-size: 0.8em;
+}
+
+.title{
+  background-color: rgb(201, 197, 197);
 }
 
 
@@ -22,14 +28,16 @@ body,html{
 }
 
 .seccion-compra {
-  font-size: 1.2em;
+  font-size: 1.6em;
   margin-bottom: 10px;
   color: #2ecc71;
+  font-weight: bold;
 }
 
 .seccion-venta {
-  font-size: 1.2em;
+  font-size: 1.6em;
   margin-bottom: 10px;
   color: #e74c3c;
+  font-weight: bold;
 }
 
